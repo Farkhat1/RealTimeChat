@@ -1,0 +1,33 @@
+
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Register Page</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+<div class="user-form" id="username-page">
+    <h2 th:text="'Register new user'">Register new user</h2>
+    <form th:action="@{/register}" th:object="${user}" method="post" id="usernameForm">
+        <label for="username" th:text="Username">Username</label>
+        <input type="text" id="username" th:field="*{username}" th:placeholder="Username">
+
+        <label for="fullName" th:text="'Full Name'">Full Name</label>
+        <input type="text" id="fullName" th:field="*{fullName}" th:placeholder="'Full Name'">
+
+        <label for="password" th:text="Password">Password</label>
+        <input type="password" id="password" th:field="*{password}" th:placeholder="Password">
+
+        <button type="submit" th:text="'Save new user'">Save new user</button>
+    </form>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/stomp.js/2.3.3/stomp.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/sockjs-client/1.6.1/sockjs.min.js"></script>
+<script th:src="@{/js/main.js}"></script>
+</body>
+</html>

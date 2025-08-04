@@ -25,8 +25,16 @@
             </form>
         </div>
     </div>
+    <div class="chat-area">
+        <div class="chat-area" id="chat-messages"></div>
+        <form name="messageForm" class="hidden" id="messageForm">
+            <div class="message-input">
+                <input type="text" autocomplete="off" id="message" placeholder="Enter your message here...">
+                <button>Send</button>
+            </div>
+        </form>
+    </div>
 </div>
-
 <script src="https://cdnjs.cloudflare.com/ajax/libs/stomp.js/2.3.3/stomp.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/sockjs-client/1.6.1/sockjs.min.js"></script>
 <script th:src="@{/js/main.js}"></script>
